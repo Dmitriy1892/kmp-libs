@@ -1,6 +1,7 @@
 package com.github.dmitriy1892.kmp.libs.extensions
 
 import org.gradle.api.Project
+import org.gradle.api.artifacts.ExternalModuleDependencyBundle
 import org.gradle.api.artifacts.MinimalExternalModuleDependency
 import org.gradle.api.artifacts.ProjectDependency
 import org.gradle.api.provider.Provider
@@ -38,6 +39,7 @@ fun Project.commonTestDependencies(block: KotlinDependencyHandler.() -> Unit) {
     }
 }
 
+@JvmName("implementationMinimalExternalModuleDependency")
 internal fun DependencyHandlerScope.implementation(
     dependency: Provider<MinimalExternalModuleDependency>
 ) {
@@ -49,6 +51,13 @@ internal fun DependencyHandlerScope.implementation(
 ) {
     add("implementation", dependency)
 }
+
+internal fun DependencyHandlerScope.implementation(
+    dependency: Provider<ExternalModuleDependencyBundle>
+) {
+    add("implementation", dependency)
+}
+
 
 internal fun DependencyHandlerScope.kapt(
     dependency: Provider<MinimalExternalModuleDependency>

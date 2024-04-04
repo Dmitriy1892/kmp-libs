@@ -3,6 +3,7 @@ import com.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionName
 
 plugins {
     id("com.android.application")
+    kotlin("android")
     id("android-base-config")
 }
 

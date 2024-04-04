@@ -12,7 +12,7 @@ private const val VERSION_MAJOR = "VERSION_MAJOR"
 private const val VERSION_MINOR = "VERSION_MINOR"
 private const val VERSION_PATCH = "VERSION_PATCH"
 
-val Project.projectJavaVersion: JavaVersion
+internal val Project.projectJavaVersion: JavaVersion
     get() = JavaVersion.toVersion(libs.versions.java.get().toInt())
 
 internal val Project.libs: LibrariesForLibs
