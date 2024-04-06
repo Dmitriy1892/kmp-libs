@@ -14,10 +14,10 @@ plugins {
 setMavenPublishConfig(
     libraryName = "KMP-MVVM",
     libraryDescription = "KMP-MVVM is a library with useful classes and extensions for Kotlin Multiplatform development",
-    librarySourceUrl = "https://github.com/Dmitriy1892/kmp-libs/mvvm.git",
+    librarySourceUrl = "https://github.com/Dmitriy1892/kmp-libs/tree/main/mvvm",
     libraryGroupId = "com.github.dmitriy1892.kmplibs.mvvm",
     libraryVersion = libsCatalog.versions.kmp.libs.mvvm.get(),
-    licenseUrl = "https://github.com/Dmitriy1892/kmp-libs/mvvm/LICENSE.md",
+    licenseUrl = "https://github.com/Dmitriy1892/kmp-libs/blob/main/LICENSE.md",
 )
 
 android {
