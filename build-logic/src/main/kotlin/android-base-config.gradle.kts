@@ -1,13 +1,13 @@
 import com.android.build.gradle.BaseExtension
-import com.github.dmitriy1892.kmp.libs.extensions.libs
+import com.github.dmitriy1892.kmp.libs.extensions.libsCatalog
 import com.github.dmitriy1892.kmp.libs.extensions.projectJavaVersion
 
 configure<BaseExtension> {
-    compileSdkVersion(libs.versions.compileSdk.get().toInt())
+    compileSdkVersion(libsCatalog.versions.compileSdk.get().toInt())
 
     defaultConfig {
-        minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
+        minSdk = libsCatalog.versions.minSdk.get().toInt()
+        targetSdk = libsCatalog.versions.targetSdk.get().toInt()
     }
 
     compileOptions {

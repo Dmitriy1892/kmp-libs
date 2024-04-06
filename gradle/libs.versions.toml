@@ -10,10 +10,16 @@ kotlin = "1.9.23"
 androidx-activityCompose = "1.8.2"
 androidx-compose-bom = "2024.04.00"
 androidx-compose-compiler = "1.5.11"
+androidx-lifecycle = "2.8.0-alpha04"
 
 compose = "1.6.1"
 
+koin = "3.5.0"
+
+kotlinx-coroutines = "1.8.0"
 kotlinx-immutablecollections = "0.3.6"
+
+kmp-libs-mvvm = "0.0.6"
 
 [libraries]
 # plugins for composite build
@@ -30,7 +36,11 @@ androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-immutablecollections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinx-immutablecollections" }
 
 # testing libraries

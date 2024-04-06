@@ -1,4 +1,4 @@
-import com.github.dmitriy1892.kmp.libs.extensions.libs
+import com.github.dmitriy1892.kmp.libs.extensions.libsCatalog
 
 plugins {
     id("multiplatform-config")
@@ -24,7 +24,7 @@ kotlin {
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
 
-            implementation(libs.kotlinx.immutablecollections)
+            implementation(libsCatalog.kotlinx.immutablecollections)
         }
     }
 }
