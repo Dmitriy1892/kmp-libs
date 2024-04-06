@@ -19,7 +19,7 @@ koin = "3.5.0"
 kotlinx-coroutines = "1.8.0"
 kotlinx-immutablecollections = "0.3.6"
 
-kmp-libs-mvvm = "0.0.6"
+kmp-libs-mvvm = "0.0.1"
 
 [libraries]
 # plugins for composite build
