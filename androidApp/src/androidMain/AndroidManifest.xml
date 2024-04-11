@@ -6,7 +6,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.dmitriy1892.kmp.libs.android.MainActivity"
+            android:name="io.dmitriy1892.kmp.libs.android.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

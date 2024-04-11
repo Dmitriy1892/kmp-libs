@@ -1,5 +1,5 @@
-import com.github.dmitriy1892.kmp.libs.extensions.artifact.ios.spm.swiftPackageManagerFramework
-import com.github.dmitriy1892.kmp.libs.extensions.commonTestDependencies
+import io.github.dmitriy1892.kmp.libs.extensions.artifact.ios.spm.swiftPackageManagerFramework
+import io.github.dmitriy1892.kmp.libs.extensions.commonTestDependencies
 
 plugins {
     id("android-library-config")
@@ -8,7 +8,7 @@ plugins {
 
 swiftPackageManagerFramework(
     archiveName = "shared",
-    bundleId = "com.github.dmitriy1892.kmp.libs.shared"
+    bundleId = "io.github.dmitriy1892.kmp.libs.shared"
 )
 
 commonTestDependencies {
@@ -16,5 +16,5 @@ commonTestDependencies {
 }
 
 android {
-    namespace = "com.github.dmitriy1892.kmp.libs"
+    namespace = "io.github.dmitriy1892.kmp.libs"
 }

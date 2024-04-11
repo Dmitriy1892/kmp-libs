@@ -1,13 +1,15 @@
 import com.android.build.gradle.BaseExtension
-import com.github.dmitriy1892.kmp.libs.extensions.libsCatalog
-import com.github.dmitriy1892.kmp.libs.extensions.projectJavaVersion
+import io.github.dmitriy1892.kmp.libs.extensions.libs
+import io.github.dmitriy1892.kmp.libs.extensions.projectJavaVersion
 
 configure<BaseExtension> {
-    compileSdkVersion(libsCatalog.versions.compileSdk.get().toInt())
+    compileSdkVersion(libs.versions.compileSdk.get().toInt())
 
     defaultConfig {
-        minSdk = libsCatalog.versions.minSdk.get().toInt()
-        targetSdk = libsCatalog.versions.targetSdk.get().toInt()
+        minSdk = libs.versions.minSdk.get().toInt()
+        targetSdk = libs.versions.targetSdk.get().toInt()
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {

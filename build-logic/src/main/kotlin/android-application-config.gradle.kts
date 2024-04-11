@@ -1,5 +1,5 @@
-import com.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionCode
-import com.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionName
+import io.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionCode
+import io.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionName
 
 plugins {
     id("com.android.application")

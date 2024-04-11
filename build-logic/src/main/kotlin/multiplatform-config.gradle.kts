@@ -1,4 +1,4 @@
-import com.github.dmitriy1892.kmp.libs.extensions.projectJavaVersion
+import io.github.dmitriy1892.kmp.libs.extensions.projectJavaVersion
 import org.gradle.kotlin.dsl.kotlin
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 

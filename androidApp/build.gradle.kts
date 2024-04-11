@@ -1,5 +1,5 @@
-import com.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionCode
-import com.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionName
+import io.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionCode
+import io.github.dmitriy1892.kmp.libs.extensions.getApplicationVersionName
 
 plugins {
     id("android-application-config")
@@ -10,7 +10,7 @@ android {
     namespace = "com.github.dmitriy1892.kmp.libs.android"
 
     defaultConfig {
-        applicationId = "com.github.dmitriy1892.kmp.libs.android"
+        applicationId = "io.github.dmitriy1892.kmp.libs.android"
         versionCode = getApplicationVersionCode()
         versionName = getApplicationVersionName()
     }

@@ -10,8 +10,4 @@ local.properties
 xcuserdata
 /secret.properties
 secret.properties
-**/gradle.properties
-**/gradlew
-**/gradlew.bat
-**/gradle-wrapper.jar
-**/gradle-wrapper.properties
+/mvvm-secret.properties
