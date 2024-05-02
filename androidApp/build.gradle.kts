@@ -24,5 +24,10 @@ android {
 
 dependencies {
     implementation(projects.shared)
+    implementation(projects.utils)
+
     implementation(libs.androidx.activity.compose)
+    implementation(libs.decompose.android)
+    implementation(libs.decompose.core)
+    implementation(libs.koin.android)
 }

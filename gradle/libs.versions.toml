@@ -3,39 +3,55 @@ compileSdk = "34"
 targetSdk = "34"
 minSdk = "21"
 
-agp = "8.3.1"
+agp = "8.4.0"
 java = "17"
 kotlin = "1.9.23"
 
-androidx-activityCompose = "1.8.2"
-androidx-compose-bom = "2024.04.00"
-androidx-compose-compiler = "1.5.11"
-androidx-lifecycle = "2.8.0-alpha04"
+androidx-activityCompose = "1.9.0"
+androidx-compose-bom = "2024.05.00"
+androidx-compose-compiler = "1.5.13" #3-dev-k2.0.0-RC1-50f08dfa4b4"
+androidx-lifecycle = "2.8.0-rc01"
 
-compose = "1.6.1"
+compose = "1.6.10-beta03"
 
-koin = "3.5.0"
+decompose = "3.0.0-beta01"
+essenty = "2.0.0"
+#essenty = "2.0.0-local02"
+
+google-ksp = "1.9.23-1.0.20"
+
+# Koin
+koin = "3.5.6"
+koin-android = "3.5.6"
+koin-annotations = "1.3.1"
+koin-ksp = "1.3.0"
+koin-test = "3.5.0"
 
 kotlinx-coroutines = "1.8.0"
 kotlinx-datetime = "0.6.0-RC.2"
 kotlinx-immutablecollections = "0.3.6"
+kotlinx-serialization = "1.6.3"
 
+kmp-libs-mvi = "0.0.1"
 kmp-libs-mvvm = "0.0.1"
 kmp-libs-utils = "0.0.1"
+kmp-libs-decompose = "0.0.1"
 
-napier-logger = "2.6.1"
+napier-logger = "2.7.1"
 
 # Tests
-androidx-uiTest = "1.6.5"
+androidx-uiTest = "1.6.7"
 
 [libraries]
-# plugins for composite build
+
+# Plugins for composite build
 gradleplugin-android = { module = "com.android.tools.build:gradle", version.ref = "agp" }
 gradleplugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
+gradleplugins-google-ksp = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "google-ksp" }
 gradleplugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 gradleplugin-kotlinx-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 
-# project libraries
+# AndroidX libraries
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
@@ -45,16 +61,33 @@ androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+decompose-android = { module = "com.arkivanov.decompose:extensions-android", version.ref = "decompose" }
+decompose-core = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose" }
+decompose-compose-multiplatform = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose" }
+essenty-lifecycle = { module = "com.arkivanov.essenty:lifecycle", version.ref = "essenty" }
+essenty-lifecycle-coroutines = { module = "com.arkivanov.essenty:lifecycle-coroutines", version.ref = "essenty" }
 
+# Koin libraries
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android" }
+koin-annotations = { module = "io.insert-koin:koin-annotations", version.ref = "koin-annotations" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-ksp-compiler = { module = "io.insert-koin:koin-ksp-compiler", version.ref = "koin-ksp" }
+
+# KotlinX libraries
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 kotlinx-immutablecollections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinx-immutablecollections" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx-serialization" }
 
 napier-logger = { module = "io.github.aakira:napier", version.ref = "napier-logger" }
 
 # testing libraries
 androidx-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "androidx-uiTest" }
+
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin-test" }
+koin-test-android = { module = "io.insert-koin:koin-android-test", version.ref = "koin-test" }
+
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-annotations-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
 kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common", version.ref = "kotlin" }
@@ -63,9 +96,13 @@ kotlin-test-coroutines-common = { module = "org.jetbrains.kotlinx:kotlinx-corout
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
+
+googleKsp = { id = "com.google.devtools.ksp", version.ref = "google-ksp" }
+
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 [bundles]
 

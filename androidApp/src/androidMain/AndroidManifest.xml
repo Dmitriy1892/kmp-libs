@@ -4,10 +4,14 @@
     <application
         android:allowBackup="false"
         android:supportsRtl="true"
+        android:name="io.dmitriy1892.kmp.libs.android.MainApplication"
         android:theme="@style/AppTheme">
         <activity
             android:name="io.dmitriy1892.kmp.libs.android.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

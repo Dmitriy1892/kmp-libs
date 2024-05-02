@@ -1,10 +1,5 @@
 package io.github.dmitriy1892.kmp.libs.utils.encoding
 
-import io.github.dmitriy1892.kmp.libs.utils.encoding.Base64
-import io.github.dmitriy1892.kmp.libs.utils.encoding.fromBase64
-import io.github.dmitriy1892.kmp.libs.utils.encoding.fromBase64UrlEncoded
-import io.github.dmitriy1892.kmp.libs.utils.encoding.toBase64
-import io.github.dmitriy1892.kmp.libs.utils.encoding.toBase64UrlEncoded
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals

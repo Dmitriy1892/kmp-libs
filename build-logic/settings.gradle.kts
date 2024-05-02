@@ -1,3 +1,5 @@
+import java.net.URI
+
 pluginManagement {
     repositories {
         google()
@@ -11,6 +13,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = URI("https://androidx.dev/storage/compose-compiler/repository/")
+        }
     }
 
     versionCatalogs {
@@ -21,3 +26,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "build-logic"
+
+include(":convention")

@@ -3,9 +3,7 @@ import io.github.dmitriy1892.kmp.libs.extensions.commonTestDependencies
 import io.github.dmitriy1892.kmp.libs.extensions.publication.setMavenPublishConfig
 
 plugins {
-    id("android-library-config")
-    id("multiplatform-config")
-
+    id("kmp.library")
     id("publish-config")
 }
 
@@ -13,7 +11,7 @@ setMavenPublishConfig(
     libraryName = "KMP-Utils",
     libraryDescription = "KMP-Utils is a library with useful classes and extensions for Kotlin Multiplatform development",
     librarySourceUrl = "https://github.com/Dmitriy1892/kmp-libs/tree/main/mvvm",
-    libraryGroupId = "io.github.dmitriy1892.kmp.libs.mvvm",
+    libraryGroupId = "io.github.dmitriy1892.kmp.libs",
     libraryVersion = libs.versions.kmp.libs.utils.get(),
     licenseUrl = "https://github.com/Dmitriy1892/kmp-libs/blob/main/LICENSE.md",
 )

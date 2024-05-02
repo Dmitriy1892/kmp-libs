@@ -2,9 +2,7 @@ import io.github.dmitriy1892.kmp.libs.extensions.commonMainDependencies
 import io.github.dmitriy1892.kmp.libs.extensions.publication.setMavenPublishConfig
 
 plugins {
-    id("android-library-config")
-    id("multiplatform-config")
-
+    id("kmp.library")
     id("publish-config")
 }
 
@@ -22,6 +20,6 @@ android {
 }
 
 commonMainDependencies {
-    api(libs.kotlinx.coroutines.core)
-    api(libs.androidx.lifecycle.viewmodel)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.androidx.lifecycle.viewmodel)
 }
